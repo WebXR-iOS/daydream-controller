@@ -2,9 +2,13 @@
 A JS library for using daydream controllers in Javascript!
 
 # How to use
-### Connect to device
+### Get controller api
 ```js
 var controller = new DaydreamController(); // returns Object
+```
+### Connect to device
+```js
+controller.connect(); // returns Bool
 ```
 ### Disconnect from device
 ```js
