@@ -8,7 +8,7 @@ var controller = new DaydreamController(); // returns Object
 ```
 ### Get all info
 ```js
-controller.getModel(); // returns Object
+controller.getInfo(); // returns Object
 
 {
   battery: int,
