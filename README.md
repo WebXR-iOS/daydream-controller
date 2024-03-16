@@ -4,7 +4,7 @@ A JS library for using daydream controllers in Javascript!
 # How to use
 ### Connect to device
 ```js
-var controller = new DaydreamController(); // returns Class
+var controller = new DaydreamController(); // returns Object
 ```
 ### Get all info
 ```js
