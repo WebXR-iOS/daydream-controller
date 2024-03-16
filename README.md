@@ -6,6 +6,10 @@ A JS library for using daydream controllers in Javascript!
 ```js
 var controller = new DaydreamController(); // returns Object
 ```
+### Disconnect from device
+```js
+controller.disconnect(); // returns Undefined
+```
 ### Get all info
 ```js
 controller.getInfo(); // returns Object
