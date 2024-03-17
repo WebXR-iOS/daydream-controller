@@ -9,7 +9,7 @@ class DaydreamController {
 		this.controller = null;
 		this.onChangeFunc = function() {};
 		
-		return {
+		/*return {
 			getInfo: this.getInfo,
 			getBattery: this.getBattery,
 			getModel: this.getModel,
@@ -24,7 +24,7 @@ class DaydreamController {
 			onChange: function ( callback ) {
 				this.onChangeFunc = callback;
 			}
-		};
+		};*/
 	};
 
 	async auth() {
@@ -35,9 +35,12 @@ class DaydreamController {
 			var enterCodes = await service.getCharacteristic('00000002-1000-1000-8000-00805f9b34fb');
 			var rollingCode = await rollingCodes.readValue();
 
-			await enterCodes.writeValue(rollingCode);
+			var res = await enterCodes.writeValueWithResponse(rollingCode.buffer).catch((e) => {
+				console.log(e);
+			});
+			console.log(res);
 
-			resolve(true);
+			resolve(res);
 		});
 	};
 
